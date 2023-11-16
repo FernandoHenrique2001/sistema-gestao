@@ -11,17 +11,23 @@ export default function PublishDocumentForm() {
 
     const handleFormSubmit = () => {
         const formData = {
-            authors,
-            categories,
-            tags,
             title,
             status,
-            documentLink,
         };
 
         const formDataJSON = JSON.stringify(formData);
         console.log('JSON:', formDataJSON);
-        
+
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        };
+
+        console.log(options)
+        fetch("http://localhost:3000/documentos", options)
     };
 
     return (

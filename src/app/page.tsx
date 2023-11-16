@@ -1,31 +1,26 @@
+"use client";
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
-const documents = [
-  {
-    title:
-      "Uma Análise Crítica das Implicações Éticas da Inteligência Artificial",
-    status: "concluído",
-  },
-  { title: "Estratégias de Desenvolvimento Sustentável", status: "concluído" },
-  {
-    title: "O Impacto da Globalização nas Práticas Culturais",
-    status: "concluído",
-  },
-  // {
-  //   title: "Explorando os Efeitos da Educação Online no Desempenho Acadêmico",
-  //   status: "concluído",
-  // },
-  // {
-  //   title:
-  //     "Análise da Influência da Mídia na Percepção Pública de Questões de Saúde Mental",
-  //   status: "concluído",
-  // },
-];
 
 export default function Home() {
-  return (
+  const [documents, setDocuments] = useState<any>();
+  useEffect(() => {
+    const getData = async () => {
+      const response = await fetch("http://localhost:3000/documentos")
+      const data = await response.json()
+      setDocuments(data);
+    }
+
+    getData()
+
+  })
+
+
+
+  return (documents &&
     <div className="w-screen h-screen px-20 py-5 flex flex-col items-center">
       <h1 className="text-lg">Minhas Publicações</h1>
       <div className="flex justify-end w-[60rem]">
@@ -33,7 +28,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col gap-4 mt-10">
-        {documents.map((doc) => (
+        {documents.map((doc:any) => (
           <Card key={doc.title} status={doc.status} title={doc.title}></Card>
         ))}
       </div>
