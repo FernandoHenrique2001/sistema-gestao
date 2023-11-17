@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<br>
 
-## Getting Started
+# Gestão Acadêmica
 
-First, run the development server:
+<br>
+Esse projeto está sendo desenvolvido pelos estudantes de engenharia de computação do CEFET-MG, a idéia é criar um um sistema de gerenciamento de documentos acadêmicos
+
+<br>
+
+<br>
+
+# Rodando localmente
+
+Faça o clone do projeto
+
+```bash
+git clone https://github.com/FernandoHenrique2001/sistema-gestao.git
+```
+
+Acesse o diretório.
+
+```bash
+cd sistema-gestao
+```
+
+Instale as dependências.
+
+```bash
+ npm install
+```
+
+```bash
+npm install -g json-server
+```
+
+Inicie o Json Server na porta 3000.
+
+```bash
+json-server --watch db.json
+```
+
+Abra outro terminal e inicie o app na porta 3001.
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Autores
 
-## Learn More
+- [@FernandoHenrique2001](https://api.github.com/repos/FernandoHenrique2001)
+- [@Bangladash](https://api.github.com/repos/Bangladash)
+- [@LSAquino](https://api.github.com/repos/LSAquino)
 
-To learn more about Next.js, take a look at the following resources:
+<br>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Etiquetas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
-## Deploy on Vercel
+<br>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
