@@ -47,6 +47,20 @@ npm run dev
 
 <br>
 
+# Rota back-end
+```bash
+http://localhost:3000/documentos
+```
+
+<br>
+
+# Rota app
+```bash
+http://localhost:3001
+```
+
+<br>
+
 
 # Autores
 
